@@ -1,0 +1,32 @@
+--run the \copy commands on psql 
+
+IMDB Data=# \copy title(tconst,titleType,primaryTitle, originalTitle,isAdult,startYear,endYear,runtimeMinutes) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/title2.csv'(format csv, delimiter ',', header true);
+COPY 9256448
+
+IMDB Data=# \copy ratings(tconst,averageRating,numVotes) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/ratings.csv'(format csv, delimiter ',', header true);
+COPY 1251610
+
+IMDB Data=# \copy genre_title(tconst, genre_tconst) FROM  '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/genre_title.csv'(format csv, delimiter ',',  true);
+COPY 14893634
+
+IMDB Data=# \copy genre(genre, genre_tconst) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/unique_genre.csv'(format csv, delimiter ',', header true);
+COPY 31
+
+IMDB Data=# \copy episode(tconst ,parenttconst, seasonnumber, episodenumber) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/episode.csv'(format csv, delimiter ',', header true);
+COPY 7046837
+
+IMDB Data=# \copy akas(titleId, ordering, title,region, language, types, attributes, isOriginalTitle) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/akas.csv'(format csv, delimiter ',', header true);
+COPY 10
+
+IMDB Data=# \copy principals(tconst, ordering, nconst, category, job, characters) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/principals.csv'(format csv, delimiter ',', header true);
+
+IMDB Data=# \copy people(nconst, primaryname, birthyear, deathyear, primaryprofession, knownfortitles) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/people.csv'(format csv, delimiter ',', header true);
+COPY 12250337
+
+
+IMDB Data=# \copy director_title_mapping(tconst, directorId) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/director_mapping.csv'(format csv, delimiter ',', header true);
+COPY 7127587
+
+IMDB Data=# \copy writer_title_mapping(tconst,writerId) FROM '/Users/deepika/Desktop/CSCI620/Assignment_1/IMDB/ModifiedData/writer_mapping.csv'(format csv, delimiter ',', header true);
+COPY 11382681
+
